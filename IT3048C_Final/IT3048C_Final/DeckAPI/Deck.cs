@@ -53,6 +53,12 @@ namespace IT3048C_Final.DeckAPI
             DeckID = response?.deck_id;
         }
 
+        public async Task<Card> DrawCardAsync()
+        {
+            // Call the existing DrawCard method which performs the drawing operation
+            return await DrawCard();
+        }
+
         // Get number of cards remaining in deck
         public async Task<int?> GetNumberOfCardsInDeck()
         {
